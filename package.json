@@ -1,0 +1,22 @@
+
+{
+  "name": "nearportal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.3.0"  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "nearportal-client": "yarn workspace nearportal-client start",
+    "nearportal-server": "yarn workspace nearportal-server start",
+    "start": "concurrently --kill-others-on-fail  \"yarn\" \"yarn nearportal-client\" \"yarn nearportal-server\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
